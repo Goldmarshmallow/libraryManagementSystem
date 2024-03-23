@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-
+// 1
 using namespace std;
 #define MAX 1000
 struct Person {
@@ -61,23 +61,23 @@ int main() {
 }
 void addBooks(Arraybooks* abs) {
     if (abs->length >= MAX) {
-        cout << "Êé¼®ÒÑÂú" << endl;
+        cout << "ï¿½é¼®ï¿½ï¿½ï¿½ï¿½" << endl;
     }
     else {
         string name;
-        cout << "ÇëÊäÈëÊé¼®µÄÃû×Ö: " << endl;
+        cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é¼®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: " << endl;
         cin >> name;
         abs->book[abs->length].name = name;
         int price;
-        cout << "ÇëÊäÈëÊéµÄ¼Û¸ñ£º " << endl;
+        cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼Û¸ï¿½ " << endl;
         cin >> price;
         abs->book[abs->length].price = price;
         string num;
-        cout << "ÇëÊäÈëÊéµÄ±àºÅ£º " << endl;
+        cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½Å£ï¿½ " << endl;
         cin >> num;
         abs->book[abs->length].number = num;
         abs->length++;
-        cout << "Ìí¼Ó³É¹¦" << endl;
+        cout << "ï¿½ï¿½ï¿½Ó³É¹ï¿½" << endl;
     }
 }
 int isExist(Arraybooks* abs, string name) {
@@ -89,7 +89,7 @@ int isExist(Arraybooks* abs, string name) {
     return -1;
 }
 void dalateBooks(Arraybooks* abs) {
-    cout << "ÇëÊäÈëÄãÒªÉ¾³ýµÄÊé¼®" << endl;
+    cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÉ¾ï¿½ï¿½ï¿½ï¿½ï¿½é¼®" << endl;
     string name;
     cin >> name;
     int ret = isExist(abs, name);
@@ -103,82 +103,82 @@ void dalateBooks(Arraybooks* abs) {
             abs->book[i - 1].price = abs->book[i].price;
             abs->length--;
         }
-        cout << "É¾³ý³É¹¦" << endl;
+        cout << "É¾ï¿½ï¿½ï¿½É¹ï¿½" << endl;
     }
     else if (ret != 1 && ret == abs->length - 1) {
         abs->length--;
     }
     else {
-        cout << "²éÎÞ´ËÊé" << endl;
+        cout << "ï¿½ï¿½ï¿½Þ´ï¿½ï¿½ï¿½" << endl;
     }
 }
 void CheckBook(Arraybooks* abs) {
-    cout << "ÊäÈëÄãÒª²éÕÒµÄÊé¼®" << endl;
+    cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Òµï¿½ï¿½é¼®" << endl;
     string name;
     cin >> name;
     int ret = isExist(abs, name);
     if (ret != -1) {
-        cout << "ÊéÃûÎª£º" << abs->book[ret].name << "\t";
-        cout << "Êé¼Û¸ñÎª£º" << abs->book[ret].price << "\t";
-        cout << "Êé±àºÅÎª£º" << abs->book[ret].number << endl;
+        cout << "ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½" << abs->book[ret].name << "\t";
+        cout << "ï¿½ï¿½Û¸ï¿½Îªï¿½ï¿½" << abs->book[ret].price << "\t";
+        cout << "ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½" << abs->book[ret].number << endl;
     }
     else {
-        cout << "²éÎÞ´ËÊé" << endl;
+        cout << "ï¿½ï¿½ï¿½Þ´ï¿½ï¿½ï¿½" << endl;
     }
 }
 void cleanbooks(Arraybooks* abs) {
     abs->length = 0;
-    cout << "ÇåÀíÍê³É" << endl;
+    cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" << endl;
 }
 void changebooks(Arraybooks* abs) {
-    cout << "ÊäÈëÄãÒªÐÞ¸ÄµÄÍ¼Êé" << endl;
+    cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½Þ¸Äµï¿½Í¼ï¿½ï¿½" << endl;
     string name;
     cin >> name;
     int ret = isExist(abs, name);
     if (ret != -1) {
-        cout << "ÇëÊäÈëÃû×Ö£º " << endl;
+        cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö£ï¿½ " << endl;
         string name;
         cin >> name;
         abs->book[ret].name = name;
 
-        cout << "ÇëÊäÈë¼Û¸ñ£º " << endl;
+        cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Û¸ï¿½ " << endl;
         int price;
         cin >> price;
         abs->book[ret].price = price;
 
-        cout << "ÇëÊäÈë±àºÅ: " << endl;
+        cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: " << endl;
         string num;
         cin >> num;
         abs->book[ret].number = num;
     }
     else {
-        cout << "²éÎÞ´ËÊé" << endl;
+        cout << "ï¿½ï¿½ï¿½Þ´ï¿½ï¿½ï¿½" << endl;
     }
 }
 void showbooks(Arraybooks* abs) {
     if (abs->length == 0) {
-        cout << "Êé¼ÜÎª¿Õ" << endl;
+        cout << "ï¿½ï¿½ï¿½Îªï¿½ï¿½" << endl;
     }
     else {
         for (int i = 0; i < abs->length; ++i) {
-            cout << "Êé¼®Ãû×Ö £º " << abs->book[i].name << "\t";
-            cout << "Êé¼®¼Û¸ñ £º " << abs->book[i].price << "\t";
-            cout << "Êé¼®±àºÅ £º " << abs->book[i].number << endl;
+            cout << "ï¿½é¼®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ " << abs->book[i].name << "\t";
+            cout << "ï¿½é¼®ï¿½Û¸ï¿½ ï¿½ï¿½ " << abs->book[i].price << "\t";
+            cout << "ï¿½é¼®ï¿½ï¿½ï¿½ ï¿½ï¿½ " << abs->book[i].number << endl;
         }
     }
 }
 int outSystem() {
-    cout << "»¶Ó­ÏÂ´ÎÊ¹ÓÃ" << endl;
+    cout << "ï¿½ï¿½Ó­ï¿½Â´ï¿½Ê¹ï¿½ï¿½" << endl;
     return 0;
 }
 void mean() {
     cout << "**************************" << endl;
-    cout << "*******1¡¢¼ÓÈëÍ¼Êé********" << endl; 
-    cout << "*******2¡¢°´ÃûÉ¾³ýÍ¼Êé****" << endl;
-    cout << "*******3¡¢°´Ãû²éÕÒÍ¼Êé****" << endl;
-    cout << "*******4¡¢Çå¿ÕÍ¼Êé¼Ü******" << endl;
-    cout << "*******5¡¢ÐÞ¸ÄÍ¼ÊéÃû******" << endl;
-    cout << "*******6¡¢ÏÔÊ¾Í¼Êé¼Ü******" << endl;
-    cout << "*******7¡¢ÍË³öÏµÍ³********" << endl; 
+    cout << "*******1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½********" << endl; 
+    cout << "*******2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¾ï¿½ï¿½Í¼ï¿½ï¿½****" << endl;
+    cout << "*******3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½****" << endl;
+    cout << "*******4ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½******" << endl;
+    cout << "*******5ï¿½ï¿½ï¿½Þ¸ï¿½Í¼ï¿½ï¿½ï¿½ï¿½******" << endl;
+    cout << "*******6ï¿½ï¿½ï¿½ï¿½Ê¾Í¼ï¿½ï¿½ï¿½******" << endl;
+    cout << "*******7ï¿½ï¿½ï¿½Ë³ï¿½ÏµÍ³********" << endl; 
     cout << "**************************" << endl;
 }

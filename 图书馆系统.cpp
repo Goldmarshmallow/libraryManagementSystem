@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-// 1
+// 2
 using namespace std;
 #define MAX 1000
 struct Person {
